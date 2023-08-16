@@ -28,7 +28,7 @@ fun SplashScreen(navController: NavController) {
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color(parseColor("#FFD243"))),
+            .background(color = Color(parseColor("#FFD243")))
     ) {
         Image(
             painter = painterResource(id = R.drawable.frame_66),

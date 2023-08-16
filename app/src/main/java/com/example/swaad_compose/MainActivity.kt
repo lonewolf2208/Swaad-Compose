@@ -11,6 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.swaad_compose.ui.components.SignUp
 import com.example.swaad_compose.ui.components.SplashScreen
 import com.example.swaad_compose.ui.components.UserLogin
 import com.example.swaad_compose.ui.theme.Swaad_ComposeTheme
@@ -24,7 +25,9 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 NavHost(navController = navController, startDestination = "splash_screen"){
                     composable("splash_screen"){ SplashScreen(navController)}
-                    composable("login"){ UserLogin()}
+                    composable("login"){ UserLogin(navController)}
+                    composable("sign_up"){ SignUp()}
+                    composable("home"){}
                 }
             }
         }
